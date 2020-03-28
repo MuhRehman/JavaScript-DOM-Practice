@@ -1,18 +1,138 @@
 
-    var even = document.querySelectorAll(".list-name li:nth-child(even)");
-    var odd = document.querySelectorAll(".list-name li:nth-child(odd)");
 
-// console.log(text);
+let form = document.getElementById("inputtext");
 
-function rehman(){
 
-for (let index = 0; index < even.length; index++) {
+let itemList = document.getElementById('Items');
+
+
+form.addEventListener('submit', additem);
+itemList.addEventListener('click', removeItem);
+
+
+function additem(e) {
+    e.preventDefault();
+    let newItem = document.getElementById("item").value;
+    let li = document.createElement("li");
+    let deleteBtn = document.createElement("button");
+     deleteBtn.className = 'float-right btn-sm btn-danger delete';
+    li.className = 'list-group-item';
+    // console.log(li);
+    deleteBtn.appendChild(document.createTextNode("Delete Item"));
+    li.appendChild(deleteBtn);
+    li.appendChild(document.createTextNode(newItem));
+
+    itemList.appendChild(li);
     
-    even[index].style.color = "red";
-    odd[index].style.color = "blue";
     
 }
+function removeItem(e) {
+   if (e.target.classList.contains('delete')) {
+       if (confirm("Are You Sure")) {
+           let li = e.target.parentElement;
+           itemList.removeChild(li);
+           
+       }
+       
+   }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let button = document.getElementById('button');
+// button.addEventListener('mouseup',clickBtn);
+
+
+
+
+
+
+
+// function clickBtn (e) {
+//     console.log('Even Type :'+e.type);
+    
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let button = document.getElementById('button').addEventListener('click',clickBtn);
+
+
+
+// function clickBtn(e) {
+//    console.log(e.target.id);
+//    console.log(e.target.className);
+//    console.log(e.target.type);
+//    console.log(e.clientX);
+
+
+   
+// }
+// function clickBtn() {
+//     document.getElementById("header1    ").style.backgroundColor = 'red'; 
+//    document.getElementById("title").textContent = 'Change'; 
+// }
+// var newDev = document.createElement('div');
+
+//    newDev.className = 'Hello';
+
+// console.log(newDev);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     var even = document.querySelectorAll(".list-name li:nth-child(even)");
+//     var odd = document.querySelectorAll(".list-name li:nth-child(odd)");
+
+// // console.log(text);
+
+// function rehman(){
+
+// for (let index = 0; index < even.length; index++) {
+    
+//     even[index].style.color = "red";
+//     odd[index].style.color = "blue";
+    
+// }
+// }
 
 // function rehman() {
 //     // alert();
