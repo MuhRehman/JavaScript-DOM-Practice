@@ -1,42 +1,76 @@
 
 
-let form = document.getElementById("inputtext");
+// let form = document.getElementById("inputtext");
 
 
-let itemList = document.getElementById('Items');
+// let itemList = document.getElementById('Items');
 
 
-form.addEventListener('submit', additem);
-itemList.addEventListener('click', removeItem);
+// form.addEventListener('submit', additem);
+// itemList.addEventListener('click', removeItem);
 
 
-function additem(e) {
-    e.preventDefault();
-    let newItem = document.getElementById("item").value;
-    let li = document.createElement("li");
-    let deleteBtn = document.createElement("button");
-     deleteBtn.className = 'float-right btn-sm btn-danger delete';
-    li.className = 'list-group-item';
-    // console.log(li);
-    deleteBtn.appendChild(document.createTextNode("Delete Item"));
-    li.appendChild(deleteBtn);
-    li.appendChild(document.createTextNode(newItem));
 
-    itemList.appendChild(li);
-    
-    
-}
-function removeItem(e) {
-   if (e.target.classList.contains('delete')) {
-       if (confirm("Are You Sure")) {
-           let li = e.target.parentElement;
-           itemList.removeChild(li);
+
+
+
+     let  h = document.createElement('h1');
+     let  text = document.createTextNode('Yes Right Hello World'); 
+
+       let main = h.appendChild('text');
+     console.log(main);
+     
+
+// const  number = ['One','Two','Three','Four','Five','Six']
+
+//            testNumber.array.forEach(number => {
+//                 console.log(testNumber);
+//            });
            
-       }
-       
-   }
+// console.log(familyNames);
+
+
+// function additem(e) {
+//     e.preventDefault();
+//     let newItem = document.getElementById("item").value;
+//     let li = document.createElement("li");
+//     let deleteBtn = document.createElement("button");
+//      deleteBtn.className = 'float-right btn-sm btn-danger delete';
+//     li.className = 'list-group-item';
+//     // console.log(li);
+//     deleteBtn.appendChild(document.createTextNode("Delete Item"));
+//     li.appendChild(deleteBtn);
+//     li.appendChild(document.createTextNode(newItem));
+
+//     itemList.appendChild(li);
     
-}
+//     ext install TabNine.tabnine-vscode
+
+// }
+// function removeItem(e) {
+//    if (e.target.classList.contains('delete')) {
+//        if (confirm("Are You Sure")) {
+//            let li = e.target.parentElement;
+//            itemList.removeChild(li);
+           
+//        }
+       
+//    }
+    
+// }
+
+
+
+
+
+
+
+
+
+ 
+
+
+
 
 
 
